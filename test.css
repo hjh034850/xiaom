@@ -13,7 +13,11 @@
     height: 100%;
     display: block;
 }
+
+
+
 /*nav开始*/
+
 /*main-menu开始*/
 .nav{
     width: 100%;
@@ -53,6 +57,7 @@
 
 }
 /*main-menu结束*/
+
 /*user-info开始*/
 .user-info{
     float: right;
@@ -111,12 +116,12 @@
 }
 @keyframes run {
     100%{
-        height: 85px;
+        height: 65px;
     }
 
 }
-
 /*userinfo结束*/
+
 /*nav结束*/
 
 
@@ -125,7 +130,8 @@
 .header{
     width: 100%;
     height: 100px;
-   overflow: hidden;
+
+    position: relative;
 
 }
 .header .header-logo{
@@ -145,12 +151,16 @@
     list-style: none;
     float: left;
     margin-left: 185px;
+    line-height: 100px;
 }
-.wrapper .header-menu li{
+.header-menu li{
     float: left;
     padding: 0 10px;
+    font-size: 18px;
+}
 
-
+.header .header-menu a:hover{
+    color: #ff6700;
 }
 .wrapper .header-menu a{
     display: block;
@@ -160,9 +170,75 @@
     color: #333;
 }
 
+.sub-menu{
 
+    height: 0px;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    position: absolute;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+    display: none;
 
+}
+.sub-menu li{
+    width: 204px;
+    height: 201px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+.p-list .p-line{
+    width: 1px;
+    height: 100px;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    background: #b0b0b0;
+}
 
+.flags{
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 17px;
+}
+.flags span{
+    padding: 1px 14px;
+    font-size: 12px;
+    border: 1px solid #ff6700;
+}
+
+.p-title{
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: -20px;
+
+}
+.p-title a{
+    color: rgb(51, 51, 51)
+}
+.p-price{
+
+    color: #ff6700;
+    font-size: 12px;
+}
+.menu-item:hover .sub-menu{
+    display: block;
+    animation: slide 0.5s ease-in  forwards;
+}
+@keyframes slide {
+    100%{
+        height: 226px;
+    }
+
+}
 
 
 /*header结束*/
