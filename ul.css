@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+.div1{
+    width: 800px;
+    height: 460px;
+    border: 1px solid black;
+}
+.div1 ul{
+    float: left;
+}
+.menu1 img{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+li{
+    display: block;
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    list-style: none;
+    /*text-align: center;*/
+}
+.sub-li img:hover{
+    cursor: pointer;
+}
+.sub-li a:hover .span1{
+    color: #ff6700;
+    cursor: pointer;
+}
+/*.sub-li a:hover{*/
+    /*color: #ff6700;*/
+    /*cursor: pointer;*/
+/*}*/
+.sub-li a{
+    float: left;
+    margin-left: 10px;
+    font-size: 13px;
+}
+.sub-li .span2{
+    /*width: 10px;*/
+    /*height: 10px;*/
+    padding: 2px 10px;
+    font-size: 13px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+.sub-li .span2:hover{
+    cursor: pointer;
+    background: #ff6700;
+}
