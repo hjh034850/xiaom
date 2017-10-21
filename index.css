@@ -101,6 +101,7 @@ a{
     height:100%;
     border-top:1px solid #e0e0e0;
     box-shadow:0px 5px 17px rgba(0,0,0,0.18);
+    display: none;
     /*display: none;*/
 }
 .sub-list-3{
@@ -114,6 +115,37 @@ a{
     padding: 18px 15px 18px 20px;
 }
 .sub-list .list-img{
+    width: 40px;
+    height: 40px;
     vertical-align: middle;
+}
+.list-title{
+    color: #333333;
+    font-size: 14px;
+}
+.list-img-box{
+
+    height: 100%;
+    width: 168px;
+}
+.list-img-box:hover span{
+    color: #ff6700;
+}
+.list .buy-btn{
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    width: 58px;
+    height: 22px;
+   float: right;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.list .buy-btn:hover{
+    color: #e0e0e0;
+    background: #ff6700;
+}
+.list-item:hover .sub-list{
+    display: block;
 }
 /*轮播图结束*/
