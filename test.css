@@ -25,7 +25,7 @@
     background: #333;
 }
 .wrapper{
-    width: 1400px;
+    width: 1375px;
     height: 40px;
     margin: auto;
 
@@ -61,8 +61,9 @@
 /*user-info开始*/
 .user-info{
     float: right;
-    margin-right:20px;
+
     height: 40px;
+
 
 }
 .user-info li{
@@ -85,7 +86,8 @@
 .user-info .cart{
     width: 120px;
     height: 40px;
-    position: relative;
+    position:relative;
+
     text-align: center;
 }
 .user-info .cart a{
@@ -140,13 +142,11 @@
     width: 55px;
     height: 55px;
     float: left;
+    margin-top: 22px;
     background: url("img/mi-logo.png") no-repeat 50% 50%;
   background-color: #ff6700;
 }
-.header .wrapper{
 
-    margin-top: 20px;
-}
 .wrapper .header-menu{
     height: 100px;
     list-style: none;
@@ -166,8 +166,8 @@
 }
 .wrapper .header-menu a{
     display: block;
-    height: 60px;
-    line-height: 60px;
+
+
     text-decoration: none;
     color: #333;
 }
@@ -183,7 +183,7 @@
     top: 100px;
     overflow: hidden;
     display: none;
-    z-index: 2;
+    z-index: 4;
 
 }
 .sub-menu li{
@@ -243,9 +243,9 @@
     width: 300px;
     height: 50px;
     float: right;
-    margin-top: 10px;
+    margin-top: 20px;
    position: relative;
-    right: 16px;
+
 
 }
 .search-text{
@@ -258,7 +258,7 @@
     outline: none;
 }
 .search-btn{
-    width: 52px;
+    width: 55px;
     height: 48px;
     outline: none;
     border: 1px solid #e0e0e0;
@@ -270,11 +270,11 @@
     z-index: 1;
 }
 .icon-search{
-    width: 51px;
+    width: 53px;
     height: 48px;
     display: block;
     position: absolute;
-    right: 4px;
+    right: 3px;
     top: 0;
     text-align: center;
     line-height: 48px;
