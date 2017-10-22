@@ -1,4 +1,7 @@
 /*轮播图开始*/
+body{
+    height: 2000px;
+}
 a{
     text-decoration: none;
 }
@@ -149,3 +152,64 @@ a{
     display: block;
 }
 /*轮播图结束*/
+
+
+/*频道列表开始*/
+.channel-box{
+    margin-top: 14px;
+}
+.channel-list{
+    width: 234px;
+    height: 170px;
+    background: #5f5750;
+}
+
+.channel-list ul{
+    overflow: hidden;
+    padding: 3px 3px 0;
+}
+.channel-list li{
+    list-style: none;
+    width: 76px;
+    height: 82px;
+    float: left;
+    position: relative;
+}
+.channel-list i{
+    display: block;
+    font-size: 29px;
+    text-align: center;
+    margin-top: 18px;
+    color: rgba(255,255,255,0.7);
+
+}
+.channel-list span{
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+}
+.channel-list .line-right{
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    width: 1px;
+    height: 65px;
+    background: #665e57;
+}
+.channel-list .line-bottom{
+    position: absolute;
+    left: 4px;
+    bottom: 0px;
+    height: 1px;
+    width: 65px;
+    background: #665e57;
+}
+.channel-list li:hover{
+    cursor: pointer;
+    color:red;
+}
+
+
+
+/*频道列表结束*/
