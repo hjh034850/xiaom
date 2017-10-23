@@ -1,9 +1,12 @@
 /*轮播图开始*/
 body{
-    height: 2000px;
+    height: 4000px;
 }
 a{
     text-decoration: none;
+}
+li{
+    list-style: none;
 }
 .slide-box{
 
@@ -340,10 +343,12 @@ a{
 /*家电开始*/
 .homeelec-box{
     position: relative;
+
 }
 .content-box{
     background: #f5f5f5;
     padding-top: 60px;
+
 }
 .tab-btns{
     color: #424242;
@@ -361,5 +366,132 @@ a{
 .active{
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
+}
+.box-bd{
+    /*overflow: hidden;*/
+    height: 615px;
+}
+.box-left{
+    width: 234px;
+    float: left;
+}
+.box-left:hover img{
+    box-shadow: 1px 6px 5px 2px rgba(0,0,0,0.1);
+    margin-top: -2px;
+}
+.box-bd .box-left img{
+    width: 234px;
+    height: 614px;
+}
+
+.box-right{
+    width: 992px;
+    float: right;
+    /*visibility: hidden;*/
+    /*background: red;*/
+}
+
+.box-right .bd-item{
+    float: left;
+    margin-left: 14px;
+    width: 234px;
+    height: 300px;
+    position: relative;
+    background: #ffffff;
+    visibility:visible;
+
+}
+.bd-item:hover .sub-comment{
+    display: block;
+    animation: take 0.1s ease-in forwards;
+}
+@keyframes take {
+    100%{
+        height: 80px;
+    }
+}
+.bd-item:hover{
+    margin-top: -4px;
+    box-shadow: 1px 8px 5px 2px rgba(0,0,0,0.1);
+}
+ /*.box-right .bd-item:hover .bd-item-active{*/
+     /*transform: translate3d(0,-2px,0);*/
+ /*}*/
+.bd-item-top{
+    margin-bottom: 14px;
+}
+.bd-favour{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: red;
+    width: 64px;
+    height: 20px;
+    margin-left: -32px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+.bd-img-box{
+    display: block;
+    text-align: center;
+    margin-top: 34px;
+
+}
+.bd-img{
+    width: 150px;
+    height: 150px;
+}
+.bd-title{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #333333;
+}
+.bd-dest{
+    margin-bottom: 10px;
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #b0b0b0;
+}
+.bd-price{
+    margin: 0 10px 10px;
+    text-align: center;
+    color: #ff6700;
+    font-size: 14px;
+    font-weight: 200;
+}
+.bd-price .through{
+    text-decoration: line-through;
+    color: #b0b0b0;
+}
+.sub-comment{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 234px;
+    height: 0px;
+    display: none;
+    font-size: 12px;
+    background: #ff6700;
+}
+.sub-comment .sub-title{
+    width: 174px;
+    height: 36px;
+    margin: 10px auto;
+
+    color: #ffffff;
+    font-size: 12px;
+
+
+}
+.sub-comment .sub-author{
+    margin-left: 30px;
+    color: rgba(255,255,255,0.6);
 }
 /*家电结束*/
