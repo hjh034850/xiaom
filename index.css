@@ -1,6 +1,6 @@
 /*轮播图开始*/
 body{
-    height: 4000px;
+    height: 6000px;
 }
 a{
     text-decoration: none;
@@ -340,7 +340,7 @@ li{
 
 
 
-/*家电开始*/
+/*家电开始*//*智能*/
 .homeelec-box{
     position: relative;
 
