@@ -370,6 +370,7 @@ li{
 .box-bd{
     /*overflow: hidden;*/
     height: 615px;
+    margin-bottom: 22px;
 }
 .box-left{
     width: 234px;
@@ -518,5 +519,17 @@ li{
 .sub-comment .sub-author{
     margin-left: 30px;
     color: rgba(255,255,255,0.6);
+}
+
+
+.intelligent .box-left .box-imgtop{
+    width: 234px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+.intelligent .box-left .box-imgbottom{
+    width: 234px;
+    height: 300px;
+
 }
 /*家电结束*/
