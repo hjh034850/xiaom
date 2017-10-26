@@ -422,6 +422,43 @@ li{
 
 
 }
+.box-right .eight{
+    background: transparent;
+}
+.bd-item-imgcontainer{
+    position: absolute;
+    right: 20px;
+    top: 32px;
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.bd-item-height{
+    height: 143px;
+    position: relative;
+    margin-bottom: 14px;
+    background: #ffffff;
+}
+.bd-item .bd-item-height img{
+    width: 80px;
+    height: 80px;
+}
+.bd-item-height .titlecon{
+    color: #333333;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    top: 46px;
+    left: 30px;
+
+}
+.bd-item-height .bd-price{
+    margin: 0;
+    position: absolute;
+    left: 30px;
+    top: 72px;
+}
 .bd-item:hover .sub-comment{
     display: block;
     animation: take 0.1s ease-in forwards;
