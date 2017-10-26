@@ -536,7 +536,6 @@ li{
     position: absolute;
     bottom: 0;
     left: 0;
-
     width: 234px;
     height: 0px;
     display: none;
@@ -547,7 +546,6 @@ li{
     width: 174px;
     height: 36px;
     margin: 10px auto;
-
     color: #ffffff;
     font-size: 12px;
 
