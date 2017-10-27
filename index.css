@@ -368,7 +368,7 @@ li{
     border-bottom: 2px solid #ff6700;
 }
 .box-bd{
-    /*overflow: hidden;*/
+    overflow: hidden;
     height: 615px;
     margin-bottom: 22px;
 }
@@ -469,8 +469,8 @@ li{
     }
 }
 .bd-item:hover{
-    /*margin-top: -4px;*/
-    /*box-shadow: 1px 8px 5px 2px rgba(0,0,0,0.1);*/
+    margin-top: -4px;
+    box-shadow: 1px 8px 5px 2px rgba(0,0,0,0.1);
 }
  /*.box-right  .bd-item-active:hover{*/
      /*margin-top: -1px;*/
@@ -567,4 +567,95 @@ li{
     height: 300px;
 
 }
+.products{
+
+}
+.products .produ-list{
+    overflow: hidden;
+}
+.products .produ-list li{
+    float: left;
+    height: 415px;
+    background: #ffffff;
+    position: relative;
+}
+.products .produ-list .list2{
+    margin-left: 14px;
+}
+
+.products img{
+
+    width: 296px;
+}
 /*家电结束*/
+
+/*内容开始*/
+.container-box{
+    height: 420px;
+}
+.content-box .con-item{
+    float: left;
+    width: 296px;
+    height: 420px;
+    background: #ffffff;
+    margin-left: 14px;
+
+}
+.container-box .con-first-item{
+    margin-left:0 ;
+}
+.book{
+    border-top: 1px solid #ffac13;
+    color: #ffac13;
+}
+.con-item h2{
+    margin: 45px 0 18px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    height: 24px;
+    line-height: 24px;
+}
+.con-carousel li{
+    width: 296px;
+}
+.con-name{
+    display: block;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.con-desc{
+    display: block;
+    color: #b0b0b0;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 48px 10px;
+}
+.con-proce{
+    display: block;
+    color: #333333;
+    height: 21px;
+    text-align: center;
+    margin: 0 10px 15px;
+    font-size: 14px;
+
+}
+.con-pic{
+    display: block;
+     width: 216px;
+     height: 154px;
+    margin: 0 auto;
+
+ }
+.con-pic img{
+    width: 216px;
+    height: 154px;
+}
+
+
+
+
+/*内容结束*/
