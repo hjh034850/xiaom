@@ -281,7 +281,13 @@
         </div>
         <div class="slide">
             <div class="img-box">
-                <a href=""><img src="img/xmad.jpg" alt=""></a>
+                <a href=""><img  class="selected" src="img/轮播1.jpg" alt=""></a>
+                <a href=""><img src="img/轮播2.jpg" alt=""></a>
+                <a href=""><img src="img/轮播3.jpg" alt=""></a>
+                <a href=""><img src="img/轮播4.jpg" alt=""></a>
+                <a href=""><img src="img/轮播5.jpg" alt=""></a>
+                <a href=""><img src="img/轮播6.jpg" alt=""></a>
+
             </div>
             <i class="iconfont icon-jiantou2 prev-btn"></i>
             <i class="iconfont icon-arrowRight next-btn"></i>
@@ -331,14 +337,14 @@
             <a href="#"><img src="img/70maihoushijing.jpg" alt=""></a>
         </div>
     </div>
-    <div class="wrapper star-box">
+    <div id="starBox" class="wrapper star-box">
         <h1 class="star-title">小米明星单品</h1>
         <div class="more-box">
             <i class="iconfont icon-jiantou2 icon-left "></i>
-            <i class="iconfont icon-arrowRight icon-active"></i>
+            <i id="active" class="iconfont icon-arrowRight icon-active"></i>
         </div>
         <div class="pro-list">
-            <ul>
+            <ul class="starbox-ul">
                 <li class="pro-item color-orange">
                     <a href="#" class="pro-img-box"><img src="img/hongminote4x.png" alt="" class="pro-img"></a>
                     <a href="#" class="pro-title">红米Note 4X 浅蓝色</a>
@@ -1179,7 +1185,17 @@
                 </div>
             </div>
     </div>
-            <div></div>
+    <script src="jslib.js"></script>
+    <script>
+       /* var oIconActive = document.getElementById("active");
+        console.log(oIconActive);
+        var aStarBoxUl = document.getElementsByClassName("starbox-ul");
+        oIconActive.onclick = function(){
+            animate(aStarBoxUl,{left:-1240 + "px"});
+        }*/
+
+
+    </script>
 
 </body>
 </html>
