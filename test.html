@@ -291,7 +291,7 @@
             <i class="iconfont icon-jiantou2 prev-btn"></i>
             <i class="iconfont icon-arrowRight next-btn"></i>
             <ul id="btn" class="btns">
-                <li></li>
+                <li class="selected"></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -1196,14 +1196,29 @@
        var aLi = oBtn.getElementsByTagName("li");
        var oImg = document.getElementById("imgBanner");
        var aImg = oImg.getElementsByTagName("img");
-       for(var i = 0;i < aLi.length;i++){
+       console.log(aImg);
+       var prevImg;
+       for(var i = 0;i < aLi.length;i++) {
            aLi[i].index = i;
-           for(var j = 0;j < aLi.length;j++){
+           for (var k = 0; k < aImg.length; k++) {
+               prevImg = aImg[0];
+               aLi[i].onclick = function () {
+                   for (var j = 0; j < aLi.length; j++) {
+                       aLi[j].className = "";
+                       aImg[j].className = "";
+                   }
+
+
+                   this.className = "selected";
+                   //aImg[this.index].className = "active";
+                   animate(prevImg, {opacity: 0});
+                   animate(aImg[this.index], {opacity: 100});
+                   prevImg = aImg[this.index];
+
+               }
+
 
            }
-
-
-
        }
 
 
