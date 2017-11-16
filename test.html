@@ -280,19 +280,17 @@
             </ul>
         </div>
         <div class="slide">
-            <div class="img-box">
-
+            <div id="imgBanner" class="img-box">
                 <a href=""><img  class="selected" src="img/轮播1.jpg" alt=""></a>
                 <a href=""><img src="img/轮播2.jpg" alt=""></a>
                 <a href=""><img src="img/轮播3.jpg" alt=""></a>
                 <a href=""><img src="img/轮播4.jpg" alt=""></a>
                 <a href=""><img src="img/轮播5.jpg" alt=""></a>
                 <a href=""><img src="img/轮播6.jpg" alt=""></a>
-
             </div>
             <i class="iconfont icon-jiantou2 prev-btn"></i>
             <i class="iconfont icon-arrowRight next-btn"></i>
-            <ul class="btns">
+            <ul id="btn" class="btns">
                 <li></li>
                 <li></li>
                 <li></li>
@@ -1194,6 +1192,19 @@
         oIconActive.onclick = function(){
             animate(aStarBoxUl,{left:-1240 + "px"});
         }*/
+       var oBtn = document.getElementById("btn");
+       var aLi = oBtn.getElementsByTagName("li");
+       var oImg = document.getElementById("imgBanner");
+       var aImg = oImg.getElementsByTagName("img");
+       for(var i = 0;i < aLi.length;i++){
+           aLi[i].index = i;
+           for(var j = 0;j < aLi.length;j++){
+
+           }
+
+
+
+       }
 
 
     </script>
