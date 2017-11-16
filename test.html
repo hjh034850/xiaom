@@ -288,8 +288,8 @@
                 <a href=""><img src="img/轮播5.jpg" alt=""></a>
                 <a href=""><img src="img/轮播6.jpg" alt=""></a>
             </div>
-            <i class="iconfont icon-jiantou2 prev-btn"></i>
-            <i class="iconfont icon-arrowRight next-btn"></i>
+            <i id="prevBtn" class="iconfont icon-jiantou2 prev-btn"></i>
+            <i id="nextBtn" class="iconfont icon-arrowRight next-btn"></i>
             <ul id="btn" class="btns">
                 <li class="selected"></li>
                 <li></li>
@@ -1191,8 +1191,11 @@
        var aLi = oBtn.getElementsByTagName("li");
        var oImg = document.getElementById("imgBanner");
        var aImg = oImg.getElementsByTagName("img");
+       var oprevBtn = document.getElementById("prevBtn");
+       var onextBtn = document.getElementById("nextBtn");
        console.log(aImg);
        var prevImg;
+       var iNow = 0;
        for(var i = 0;i < aLi.length;i++) {
            aLi[i].index = i;
            for (var k = 0; k < aImg.length; k++) {
@@ -1200,6 +1203,13 @@
                aLi[i].onclick = function () {
                     fadeInChangeImg(this.index);
 
+               }
+               onextBtn.onclick = function(){
+                   iNow++;
+                   if(iNow > aImg.length-1){
+                       iNow = 0;
+                   }
+                   fadeInChangeImg(iNow);
                }
 
                function fadeInChangeImg(idx) {
