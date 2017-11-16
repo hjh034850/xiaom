@@ -1186,12 +1186,7 @@
     </div>
     <script src="jslib.js"></script>
     <script>
-       /* var oIconActive = document.getElementById("active");
-        console.log(oIconActive);
-        var aStarBoxUl = document.getElementsByClassName("starbox-ul");
-        oIconActive.onclick = function(){
-            animate(aStarBoxUl,{left:-1240 + "px"});
-        }*/
+
        var oBtn = document.getElementById("btn");
        var aLi = oBtn.getElementsByTagName("li");
        var oImg = document.getElementById("imgBanner");
@@ -1203,23 +1198,30 @@
            for (var k = 0; k < aImg.length; k++) {
                prevImg = aImg[0];
                aLi[i].onclick = function () {
+                    fadeInChangeImg(this.index);
+
+               }
+
+               function fadeInChangeImg(idx) {
+
                    for (var j = 0; j < aLi.length; j++) {
                        aLi[j].className = "";
                        aImg[j].className = "";
                    }
-
-
                    this.className = "selected";
-                   //aImg[this.index].className = "active";
                    animate(prevImg, {opacity: 0});
-                   animate(aImg[this.index], {opacity: 100});
-                   prevImg = aImg[this.index];
+                   animate(aImg[idx], {opacity: 100});
+                   prevImg = aImg[idx];
 
                }
-
-
            }
        }
+
+    </script> <!--大的轮播图-->
+    <script>
+
+
+
 
 
     </script>
