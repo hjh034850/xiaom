@@ -373,32 +373,32 @@
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
                 </li>
-                <li class="pro-item">
-                    <a href="#" class="pro-img-box"><img src="img/hongminote4x.png" alt="" class="pro-img"></a>
+                <li class="pro-item color-orange">
+                    <a href="#" class="pro-img-box"><img src="img/xiaomishouhuan2.png" alt="" class="pro-img"></a>
                     <a href="#" class="pro-title">红米Note 4X 浅蓝色</a>
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
                 </li>
-                <li class="pro-item">
-                    <a href="#" class="pro-img-box"><img src="img/hongminote4x.png" alt="" class="pro-img"></a>
+                <li class="pro-item color-green">
+                    <a href="#" class="pro-img-box"><img src="img/xiaomishouhuan2.png" alt="" class="pro-img"></a>
                     <a href="#" class="pro-title">红米Note 4X 浅蓝色</a>
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
                 </li>
-                <li class="pro-item">
-                    <a href="#" class="pro-img-box"><img src="img/hongminote4x.png" alt="" class="pro-img"></a>
+                <li class="pro-item color-blue">
+                    <a href="#" class="pro-img-box"><img src="img/xiaomishouhuan2.png" alt="" class="pro-img"></a>
                     <a href="#" class="pro-title">红米Note 4X 浅蓝色</a>
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
                 </li>
-                <li class="pro-item">
-                    <a href="#" class="pro-img-box"><img src="img/hongminote4x.png" alt="" class="pro-img"></a>
+                <li class="pro-item color-red">
+                    <a href="#" class="pro-img-box"><img src="img/xiaomishouhuan2.png" alt="" class="pro-img"></a>
                     <a href="#" class="pro-title">红米Note 4X 浅蓝色</a>
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
                 </li>
-                <li class="pro-item">
-                    <a href="#" class="pro-img-box"><img src="img/hongminote4x.png" alt="" class="pro-img"></a>
+                <li class="pro-item color-deepgreen">
+                    <a href="#" class="pro-img-box"><img src="img/xiaomishouhuan2.png" alt="" class="pro-img"></a>
                     <a href="#" class="pro-title">红米Note 4X 浅蓝色</a>
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
@@ -1229,8 +1229,23 @@
 
     </script> <!--大的轮播图-->
     <script>
-        var a = document.getElementsByClassName("more-box");
-        console.log(a);
+
+    </script><!--搜索框-->
+    <script>
+        var oStarBox = document.getElementsByClassName("starbox-ul")[0];
+        var oIconLeft= document.getElementsByClassName("icon-left")[0];
+        var oIconActive = document.getElementsByClassName("icon-active")[0];
+        oIconActive.onclick = function(){
+                var timer = setInterval(function () {
+                    oStarBox.style.left = oStarBox.offsetLeft-40 + "px";
+                }, 100)
+                if(oStarBox.style.left <= -oStarBox.offsetWidth/2){
+                    clearInterval(timer);
+                }
+
+
+        }
+
 
 
 
