@@ -5,7 +5,6 @@
     <title>小米商城</title>
     <link rel="stylesheet" href="css/iconfont.css">
     <link href="test.css" rel="stylesheet">
-
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -404,11 +403,8 @@
                     <p class="pro-dest">红外夜视，720p分辨率</p>
                     <p class="pro-price">999元起</p>
                 </li>
-
             </ul>
         </div>
-
-
     </div>
     <div class="content-box">
             <div class="wrapper homeelec-box">
@@ -1186,14 +1182,12 @@
     </div>
     <script src="jslib.js"></script>
     <script>
-
        var oBtn = document.getElementById("btn");
        var aLi = oBtn.getElementsByTagName("li");
        var oImg = document.getElementById("imgBanner");
        var aImg = oImg.getElementsByTagName("img");
        var oprevBtn = document.getElementById("prevBtn");
        var onextBtn = document.getElementById("nextBtn");
-       console.log(aImg);
        var prevImg;
        var iNow = 0;
        for(var i = 0;i < aLi.length;i++) {
@@ -1212,9 +1206,15 @@
                    }
                    fadeInChangeImg(iNow);
                }
+                oprevBtn.onclick = function(){
+                   iNow--;
+                    if(iNow < 0){
+                        iNow = aImg.length-1;
+                    }
+                    fadeInChangeImg(iNow);
 
+                }
                function fadeInChangeImg(idx) {
-
                    for (var j = 0; j < aLi.length; j++) {
                        aLi[j].className = "";
                        aImg[j].className = "";
@@ -1223,19 +1223,19 @@
                    animate(prevImg, {opacity: 0});
                    animate(aImg[idx], {opacity: 100});
                    prevImg = aImg[idx];
-
                }
            }
        }
 
     </script> <!--大的轮播图-->
     <script>
+        var a = document.getElementsByClassName("more-box");
+        console.log(a);
 
 
 
 
-
-    </script>
+    </script><!--小米明星单品-->
 
 </body>
 </html>
