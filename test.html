@@ -1238,10 +1238,13 @@
         oIconActive.onclick = function(){
                 var timer = setInterval(function () {
                     oStarBox.style.left = oStarBox.offsetLeft-40 + "px";
+                    console.log(oStarBox.style.left +"=="+ -oStarBox.offsetWidth/2 + "px");
+                    if(oStarBox.style.left <= -oStarBox.offsetWidth/2){
+                        oStarBox.style.left = "-1240px";
+                    }
+
                 }, 100)
-                if(oStarBox.style.left <= -oStarBox.offsetWidth/2){
-                    clearInterval(timer);
-                }
+
 
 
         }
