@@ -122,6 +122,7 @@
                <input type="text" class="search-text"/>
                <input type="submit" class="search-btn" value=""/>
                <i class="iconfont icon-fangdajing icon-search"></i>
+               <div></div>
            </div>
         </div>
 
@@ -1236,22 +1237,17 @@
         var oIconLeft= document.getElementsByClassName("icon-left")[0];
         var oIconActive = document.getElementsByClassName("icon-active")[0];
         oIconActive.onclick = function(){
-                var timer = setInterval(function () {
-                    oStarBox.style.left = oStarBox.offsetLeft-40 + "px";
+               var timer = setInterval(function () {
+                    oStarBox.style.left = oStarBox.offsetLeft-340 + "px";
                     console.log(oStarBox.style.left +"=="+ -oStarBox.offsetWidth/2 + "px");
-                    if(oStarBox.style.left <= -oStarBox.offsetWidth/2){
-                        oStarBox.style.left = -oStarBox.offsetWidth/2;
-                    }
+                   if(oStarBox.style.left <= -1240){
+                       clearInterval(timer);
+                       oStarBox.style.left = -1240+"px";
+                   }
                 }, 100)
 
 
-
         }
-
-
-
-
-
     </script><!--小米明星单品-->
 
 </body>
