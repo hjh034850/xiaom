@@ -1240,10 +1240,9 @@
                     oStarBox.style.left = oStarBox.offsetLeft-340 + "px";
                     console.log(oStarBox.style.left +"=="+ -oStarBox.offsetWidth/2 + "px");
                    if(oStarBox.style.left <= -1240){
+                       
                        clearInterval(timer);
                        oStarBox.style.left = -1240+"px";
-
-
                    }
                 }, 100)
 
