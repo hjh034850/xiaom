@@ -121,7 +121,24 @@
                <input type="text" class="search-text"/>
                <input type="submit" class="search-btn" value=""/>
                <i class="iconfont icon-fangdajing icon-search"></i>
-               <div></div>
+               <ul class="search-list">
+                   <li><a href="">红米4x</a></li>
+                   <li><a href="">小米note3赠双肩包</a></li>
+               </ul>
+               <ul class="search-sublist">
+                   <li><a href="">小米手机6</a></li>
+                   <li><a href="">小米手机5x</a></li>
+                   <li><a href="">红米note&nbsp4x</a></li>
+                   <li><a href="">红米手机4x</a></li>
+                   <li><a href="">小米max&nbsp2</a></li>
+                   <li><a href="">手环</a></li>
+                   <li><a href="">耳机</a></li>
+                   <li><a href="">充电宝</a></li>
+                   <li><a href="">运动鞋</a></li>
+                   <li><a href="">路由器</a></li>
+                   <li><a href="">小米盒子</a></li>
+                   <li><a href="">电视</a></li>
+               </ul>
            </div>
         </div>
 
@@ -1229,7 +1246,21 @@
 
     </script> <!--大的轮播图-->
     <script>
+        var search = document.getElementsByClassName("search");
+        var searchText = document.getElementsByClassName("search-text")[0];
+        var searchList = document.getElementsByClassName("search-list")[0];
+        var searchSubList = document.getElementsByClassName("search-sublist")[0];
+        searchText.onfocus = function(){
+            searchList.style.display = "none";
+            searchSubList.style.display = "block";
+            search.style.borderColor = "orange";
 
+        }
+        searchText.onblur = function(){
+            searchList.style.display = "block";
+            searchSubList.style.display = "none";
+
+        }
     </script><!--搜索框-->
     <script>
         var oStarBox = document.getElementsByClassName("starbox-ul")[0];
@@ -1255,7 +1286,7 @@
         }
     </script><!--小米明星单品-->
     <script>
-
+        
 
     </script><!--家电智能-->
 
