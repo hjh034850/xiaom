@@ -1236,19 +1236,28 @@
         var oIconLeft= document.getElementsByClassName("icon-left")[0];
         var oIconActive = document.getElementsByClassName("icon-active")[0];
         oIconActive.onclick = function(){
-               var timer = setInterval(function () {
-                    oStarBox.style.left = oStarBox.offsetLeft-340 + "px";
-                    console.log(oStarBox.style.left +"=="+ -oStarBox.offsetWidth/2 + "px");
-                   if(oStarBox.style.left <= -1240){
-                       
-                       clearInterval(timer);
+               var timernext = setInterval(function () {
+                    oStarBox.style.left = oStarBox.offsetLeft-440 + "px";
+                   if(oStarBox.offsetLeft <= -1240){
+                       clearInterval(timernext);
                        oStarBox.style.left = -1240+"px";
                    }
                 }, 100)
-
-
+        }
+        oIconLeft.onclick = function(){
+            var timerprev = setInterval(function () {
+                oStarBox.style.left = oStarBox.offsetLeft+440 + "px";
+                if(oStarBox.offsetLeft >= 0){
+                    clearInterval(timerprev);
+                    oStarBox.style.left = 0+"px";
+                }
+            }, 100)
         }
     </script><!--小米明星单品-->
+    <script>
+
+
+    </script><!--家电智能-->
 
 </body>
 </html>
