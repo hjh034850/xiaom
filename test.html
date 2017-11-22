@@ -432,7 +432,6 @@
                     <li>电脑</li>
                     <li>家居</li>
                 </ul>
-
             <div class="box-bd">
                 <div class="box-left">
                     <a href=""><img src="img/xiaomikongqi.jpg" alt="" class="box-img"></a>
@@ -540,8 +539,6 @@
                     </ul>
                 </div>
             </div>
-
-
     </div>
             <div class="wrapper homeelec-box">
             <h1 class="star-title">智能</h1>
@@ -1246,11 +1243,19 @@
 
     </script> <!--大的轮播图-->
     <script>
-        var search = document.getElementsByClassName("search");
+        var search = document.getElementsByClassName("search")[0];
         var searchText = document.getElementsByClassName("search-text")[0];
         var searchList = document.getElementsByClassName("search-list")[0];
         var searchSubList = document.getElementsByClassName("search-sublist")[0];
         var searchBtn = document.getElementsByClassName("search-btn")[0];
+        search.onmouseover = function(){
+            searchText.style.borderColor = "#b0b0b0";
+            searchBtn.style.borderColor = "#b0b0b0";
+        }
+        search.onmouseout = function(){
+            searchText.style.borderColor = "#e0e0e0";
+            searchBtn.style.borderColor = "#e0e0e0";
+        }
         searchText.onfocus = function(){
             searchList.style.display = "none";
             searchSubList.style.display = "block";
@@ -1290,7 +1295,7 @@
         }
     </script><!--小米明星单品-->
     <script>
-          
+
         
 
     </script><!--家电智能-->
