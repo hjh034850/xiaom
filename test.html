@@ -2248,19 +2248,19 @@
         var aLiList = oHeaderMenu.getElementsByTagName("li");
         var oSubMenu = document.getElementsByClassName("sub-menu")[0];
         var aUlList = oSubMenu.getElementsByTagName("ul");
-        oHeaderMenu.onmouseover = function(){
-            oSubMenu.style.display = "block";
-            animate(oSubMenu,{height:220});
+
         for(var i = 0;i <aLiList.length;i++){
             aLiList[i].index = i;
             aLiList[i].onmouseover= function () {
+                oSubMenu.style.display = "block";
+                animate(oSubMenu,{height:220});
                     aUlList[this.index].style.display = "block";
                 }
             aLiList[i].onmouseout = function(){
                 aUlList[this.index].style.display = "none";
             }
             }
-        }
+
         oHeaderMenu.onmouseout = function(){
             oSubMenu.style.display = "none";
         }
@@ -2311,6 +2311,11 @@
                 }
                 aSubList3[this.index].style.display = "block";
             }
+            oSlideListUl.onmouseout = function(){
+                for(var j = 0;j <aSubList3.length;j++){
+                    aSubList3[j].style.display = "none";
+                }
+            }
         }
 
 
@@ -2355,7 +2360,7 @@
                        aLi[j].className = "";
                        aImg[j].className = "";
                    }
-                   this.className = "selected";
+                  aLi[idx].className = "selected";
                    animate(prevImg, {opacity: 0});
                    animate(aImg[idx], {opacity: 100});
                    prevImg = aImg[idx];
@@ -2377,18 +2382,18 @@
     </script><!--小米明星单品-->
     <script>
         var oTabBtn = document.getElementsByClassName("tab-btns")[0];
-        var aLi = oTabBtn.getElementsByTagName("li");
+        var aLiHomeElec = oTabBtn.getElementsByTagName("li");
         var oBoxRight = document.getElementsByClassName("box-right")[0];
-        var aUl = oBoxRight.getElementsByTagName("ul");
-        for(var i = 0 ;i <aLi.length;i++){
-            aLi[i].index = i;
-            aLi[i].onmouseover = function() {
-                for (var i = 0; i < aLi.length; i++) {
-                    aLi[i].className = "";
-                    aUl[i].className = "";
+        var aUlHomeElec = oBoxRight.getElementsByTagName("ul");
+        for(var i = 0 ;i <aLiHomeElec.length;i++){
+            aLiHomeElec[i].index = i;
+            aLiHomeElec[i].onmouseover = function() {
+                for (var i = 0; i < aLiHomeElec.length; i++) {
+                    aLiHomeElec[i].className = "";
+                    aUlHomeElec[i].className = "";
                 }
                this.className = "active";
-                aUl[this.index].className = "box-selected";
+                aUlHomeElec[this.index].className = "box-selected";
 
 
             }
