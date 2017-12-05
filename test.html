@@ -56,9 +56,6 @@
                 <li><a href="#">服务</a></li>
                 <li><a href="#">社区</a></li>
             </ul>
-
-
-
             <div class="sub-menu">
                 <ul class="p-list p-list-selected">
                 <li>
@@ -565,6 +562,8 @@
                     </li>
                 </ul>
             </div>
+
+
            <div class="search">
                <input type="text" class="search-text"/>
                <input type="submit" class="search-btn" value=""/>
@@ -1672,7 +1671,7 @@
             </ul>
         </div>
     </div>
-    <div class="content-box">
+    <div id="content-box-id" class="content-box">
             <div class="wrapper homeelec-box">
                 <h1 class="star-title">家电</h1>
                 <ul class="tab-btns">
@@ -2236,6 +2235,12 @@
                     </ul>
                 </div>
             </div>
+            <div class="wrapper video">
+                <div class="video-top">
+                    <h2 class="star-title">视频</h2>
+                    <a href="#" class="more-link">查看全部</a>
+                </div>
+            </div>
     </div>
 
 
@@ -2251,10 +2256,14 @@
 
         for(var i = 0;i <aLiList.length;i++){
             aLiList[i].index = i;
-            aLiList[i].onmouseover= function () {
-                oSubMenu.style.display = "block";
+          /*  oHeaderMenu.onmouseover = function(){
                 animate(oSubMenu,{height:220});
-                    aUlList[this.index].style.display = "block";
+
+            }*/
+            aLiList[i].onmouseover= function () {
+                animate(oSubMenu,{height:220});
+                aUlList[this.index].style.display = "block";
+                oSubMenu.style.display = "block";
                 }
             aLiList[i].onmouseout = function(){
                 aUlList[this.index].style.display = "none";
@@ -2262,6 +2271,7 @@
             }
 
         oHeaderMenu.onmouseout = function(){
+            oSubMenu.style.height = 0;
             oSubMenu.style.display = "none";
         }
 
