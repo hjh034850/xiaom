@@ -1,6 +1,6 @@
 /*轮播图开始*/
 body{
-    height: 6000px;
+    height: 8000px;
 }
 a{
     text-decoration: none;
@@ -8,14 +8,26 @@ a{
 li{
     list-style: none;
 }
+/*#content-box-id li:hover{
+    animation: runtop 0.3s ease-in forwards;
+}
+@keyframes runtop {
+    100%{
+        margin-top: -1px;
+    }
+}*/
 .slide-box{
 
     position: relative;
 }
-
 .slide{
     position: relative;
 
+    height: 460px;
+
+}
+.img-box{
+    width: 1226px;
     height: 460px;
 
 }
@@ -25,8 +37,11 @@ li{
     position: absolute;
     left:0;
     top:0;
+    opacity: 0;
 }
-
+.img-box .selected{
+    opacity: 1;
+}
 .prev-btn,.next-btn{
     width: 40px;
     height: 70px;
@@ -57,15 +72,15 @@ li{
     border-radius: 50%;
     cursor: pointer;
 }
+.slide-box .btns .selected{
+    background: #898a8e;
+    border: 2px solid #4f4e56;
+}
 .btns{
     width: 128px;
     position: absolute;
     right: 5px;
     bottom: 5px;
-}
-.btns li:hover{
-    background: #898a8e;
-    border: 2px solid #4f4e56;
 }
 .list{
     background: rgba(0,0,0,0.6);
@@ -120,9 +135,9 @@ li{
 .sub-list ul li{
     padding: 18px 15px 18px 20px;
 }
-.sub-list .list-img{
-    /*width: 40px;*/
-    /*height: 40px;*/
+.list .sub-list .list-img{
+    width: 40px;
+    height: 40px;
     vertical-align: middle;
 }
 .list-title{
@@ -169,7 +184,6 @@ li{
     background: #5f5750;
     float: left;
 }
-
 .channel-list ul{
     overflow: hidden;
     padding: 3px 3px 0;
@@ -228,11 +242,9 @@ li{
     height: 170px;
 }
 .promo-list a:hover{
-    box-shadow: 2px 10px 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 8px 3px 5px rgba(0,0,0,0.1);
 }
-.promo-list a:hover img{
-    margin-top: -1px;                                                        /* hover时图片动一下*/
-}
+
 /*频道列表结束*/
 
 /*明星单品开始*/
@@ -267,17 +279,27 @@ li{
 .more-box i.icon-left{
     border-right: none;
 }
+.more-box i.icon-left:hover{
+    color: #ff6700;
+}
 .more-box i.icon-active{
     color: #b0b0b0;
 }
 .more-box i.icon-active:hover{
     color: #ff6700;
 }
-.pro-list{
+.pro-list {
     width: 1240px;
     height: 301px;
-   overflow: hidden;
     margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.starbox-ul{
+    width: 2480px;
+    position: absolute;
+    left: 0px;
+    top: 0;
 }
 .pro-item{
     width: 234px;
@@ -343,7 +365,7 @@ li{
 /*家电开始*//*智能*/
 .homeelec-box{
     position: relative;
-
+    margin-bottom: 22px;
 }
 .content-box{
     background: #f5f5f5;
@@ -361,14 +383,14 @@ li{
     float: left;
     list-style: none;
     font-weight: 200;
-    margin-left: 30px; ;
+    margin-left: 30px;
+    cursor: pointer;
 }
 .active{
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
 }
 .box-bd{
-    overflow: hidden;
     height: 615px;
     margin-bottom: 22px;
 }
@@ -411,7 +433,6 @@ li{
     /*visibility: hidden;*/
     /*background: red;*/
 }
-
 .box-right .bd-item{
     float: left;
     margin-left: 14px;
@@ -469,8 +490,8 @@ li{
     }
 }
 .bd-item:hover{
-    margin-top: -4px;
-    box-shadow: 1px 8px 5px 2px rgba(0,0,0,0.1);
+    top: -4px;
+    box-shadow: 0px 8px 16px  rgba(0,0,0,0.1);
 }
  /*.box-right  .bd-item-active:hover{*/
      /*margin-top: -1px;*/
@@ -495,6 +516,13 @@ li{
 }
 .box-right .bg-green{
     background: #83c44e;
+}
+.box-right ul{
+    float: left;
+    display: none;
+}
+.box-right .box-selected{
+    display: block;
 }
 .bd-img-box{
     display: block;
@@ -555,8 +583,6 @@ li{
     margin-left: 30px;
     color: rgba(255,255,255,0.6);
 }
-
-
 .intelligent .box-left .box-imgtop{
     width: 234px;
     height: 300px;
@@ -579,15 +605,124 @@ li{
     background: #ffffff;
     position: relative;
 }
+/*.products .produ-list li:hover{*/
+    /*top: -4px;*/
+    /*box-shadow: 0px 8px 10px rgba(0,0,0,0.3);*/
+/*}*/
 .products .produ-list .list2{
     margin-left: 14px;
 }
-
 .products img{
 
     width: 296px;
 }
 /*家电结束*/
+
+
+/*为你推荐开始*/
+.recommend  .star-title-reco{
+    color: #333333;
+    font-size: 22px;
+    font-weight: 200;
+    height: 58px;
+    line-height: 58px;
+}
+.recommend .more-box-reco{
+    position: absolute;
+    right: 0px;
+    top:20px;
+}
+.recommend .pro-list-reco{
+    width: 1240px;
+    height: 301px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.pro-list-reco ul{
+    width: 2480px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+.more-box-reco i{
+    border:1px solid #e0e0e0;
+    color:#e0e0e0;
+    width: 36px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    font-size: 18px;
+    cursor: pointer;
+}
+.more-box-reco i.icon-left{
+    border-right: none;
+}
+.more-box-reco i.icon-left:hover{
+    color: #ff6700;
+}
+.more-box-reco i.icon-active{
+    color: #b0b0b0;
+}
+.more-box-reco i.icon-active:hover{
+    color: #ff6700;
+}
+
+/*为你推荐结束*/
+/*热评产品开始*/
+.produ-list li{
+    position: relative;
+    float: left;
+    width: 296px;
+    height: 415px;
+    /*margin-left: 14px;*/
+    margin-bottom: 14px;
+    background: #fff;
+}
+.produ-list .figure{
+    width: 296px;
+    height: 220px;
+    margin: 0 0 28px;
+}
+.produ-list .produ-review{
+    height: 72px;
+    margin: 0 28px 22px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    overflow: hidden;
+}
+.produ-list .produ-author{
+    position: relative;
+    height: 18px;
+    margin: 0 28px 8px;
+    padding: 0 10px 0 0;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.produ-list .produ-info{
+    margin: 0 30px;
+}
+.produ-list .produ-info a{
+    display: block;
+    width: 70px;
+    height: 16px;
+    font-size: 14px;
+    color: #333;
+    float: left;
+}
+.produ-list .produ-info span{
+    width: 4px;
+    height: 19px;
+    color: #e0e0e0;
+    margin-left: 8px;
+}
+.produ-list .produ-info p{
+    display: inline;
+    color: #ff6700;
+}
+/*热评产品结束*/
 
 /*内容开始*/
 .container-box{
@@ -599,8 +734,10 @@ li{
     height: 420px;
     background: #ffffff;
     margin-left: 14px;
-
+    position: relative;
+    overflow: hidden;
 }
+
 .container-box .con-first-item{
     margin-left:0 ;
 }
@@ -616,7 +753,13 @@ li{
     height: 24px;
     line-height: 24px;
 }
+.con-carousel .con-carousel-list{
+    width: 888px;
+    position: absolute;
+    left: 0;
+}
 .con-carousel li{
+    float: left;
     width: 296px;
 }
 .con-name{
@@ -654,8 +797,139 @@ li{
     width: 216px;
     height: 154px;
 }
+.con-btn-box{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+    margin-left: -56px;
+}
+.con-btn-box li{
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    /*float: left;*/
+    margin: 0 2px;
+    display: inline-block;
 
+}
+.con-btn-box span{
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background: #b0b0b0;
+    border-radius: 50%;
+    text-indent: -9999px;
+    border: 2px solid #ffffff;
+}
+.btn-active span{
+    background: #ffffff;
+    border: 2px solid #ff6700;
+}
+.btn-depress:hover{
+    cursor: pointer;
+}
+.btn-depress:hover span{
+    background: #ff6700;
+}
+.con-prev-btn,.con-next-btn{
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    background: #e0e0e0;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
 
-
-
+}
+.con-prev-btn{
+    left: 0px;
+}
+.con-next-btn{
+    right: 0px;
+}
+.con-prev-btn:hover{
+    cursor: pointer;
+    background: #b0b0b0;
+}
+.con-next-btn:hover{
+    cursor: pointer;
+    background: #b0b0b0;
+}
 /*内容结束*/
+
+/*视频开始*/
+.video{
+    position: relative;
+}
+.video h2{
+    margin-left: 0;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333333;
+}
+.video .video-alink{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.video .video-alink a{
+    text-decoration: none;
+    color: #424242;
+    font-size: 16px;
+    line-height: 58px;
+}
+.video-list{
+    height: 285px;
+}
+.video-list li{
+    position: relative;
+    float: left;
+    width: 296px;
+    height: 285px;
+    text-align: center;
+    background: #ffffff;
+    margin-left: 14px;
+    margin-bottom:14px;
+}
+.video-list .video-list1{
+    margin-left:0;
+}
+.video-list img{
+    position: relative;
+}
+.video .video-item-area{
+    width: 296px;
+    margin-bottom: 28px;
+    position: relative;
+}
+.video .title{
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.video .title a{
+    color: #333;
+}
+.video .desc{
+    height: 18px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.video .video-list .iconfont{
+    font-size: 30px;
+    line-height: 20px;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    color: #ffffff;
+}
+.video .video-list .iconfont:hover{
+    color: #ff6700;
+}
+
+
+/*视频结束*/
