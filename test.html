@@ -2385,16 +2385,22 @@
         var searchSubList = document.getElementsByClassName("search-sublist")[0];
         var searchBtn = document.getElementsByClassName("search-btn")[0];
         search.onmouseover = function(){
-            searchText.style.borderColor = "#b0b0b0";
-            searchBtn.style.borderColor = "#b0b0b0";
+            if(searchText != document.activeElement) {
+                searchText.style.borderColor = "#b0b0b0";
+                searchBtn.style.borderColor = "#b0b0b0";
+            }
             searchText.onfocus = function(){
+
                 searchList.style.display = "none";
                 searchSubList.style.display = "block";
                 searchText.style.borderColor = "orange";
                 searchBtn.style.borderColor = "orange";
+                search.onmouseout = function(){
+                    searchText.style.borderColor = "#b0b0b0";
+                    searchBtn.style.borderColor = "#b0b0b0";
+                }
             }
             search.onmouseout = function(){
-                if(searchText != document.activeElement){
                     searchText.style.borderColor = "#e0e0e0";
                     searchBtn.style.borderColor = "#e0e0e0";
                 }
@@ -2405,7 +2411,7 @@
                 searchText.style.borderColor = null;
                 searchBtn.style.borderColor = null;
 
-            }
+
         }
 
     </script><!--搜索框-->
