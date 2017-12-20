@@ -568,7 +568,6 @@
                    <li><a href="">红米4x</a></li>
                    <li><a href="">小米note3赠双肩包</a></li>
                </ul>
-
                <ul class="search-sublist">
                    <li><a href="">小米手机6</a></li>
                    <li><a href="">小米手机5x</a></li>
@@ -2337,9 +2336,7 @@
         </div>
     </div>
     <div class="deep-footer">
-
     </div>
-
 
 
     <script src="jslib.js"></script>
@@ -2378,8 +2375,32 @@
         var searchList = document.getElementsByClassName("search-list")[0];
         var searchSubList = document.getElementsByClassName("search-sublist")[0];
         var searchBtn = document.getElementsByClassName("search-btn")[0];
-
-
+        search.onmouseover = function(){
+            if(searchText !== document.activeElement) {
+                searchText.style.borderColor = "#b0b0b0";
+                searchBtn.style.borderColor = "#b0b0b0";
+            }
+            searchText.onfocus = function(){
+                searchList.style.display = "none";
+                searchSubList.style.display = "block";
+                searchText.style.borderColor = "#ff6700";
+                searchBtn.style.borderColor = "#ff6700";
+            }
+            searchText.onblur = function(){
+                searchList.style.display = "block";
+                searchSubList.style.display = "none";
+                searchText.style.borderColor = "#e0e0e0";
+                searchBtn.style.borderColor = "#e0e0e0";
+            }
+        }
+        search.onmouseout = function(){
+            if(searchText == document.activeElement){
+                return null;
+            }else{
+                searchText.style.borderColor = "#e0e0e0";
+                searchBtn.style.borderColor = "#e0e0e0";
+            }
+        }
 
     </script><!--搜索框-->
     <script>
