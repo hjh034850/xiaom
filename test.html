@@ -2345,7 +2345,6 @@
         var aLiList = oHeaderMenu.getElementsByTagName("li");
         var oSubMenu = document.getElementsByClassName("sub-menu")[0];
         var aUlList = oSubMenu.getElementsByTagName("ul");
-
         for(var i = 0;i <aLiList.length;i++){
             aLiList[i].index = i;
           /*  oHeaderMenu.onmouseover = function(){
@@ -2359,9 +2358,8 @@
                 }
             aLiList[i].onmouseout = function(){
                 aUlList[this.index].style.display = "none";
+             }
             }
-            }
-
         oHeaderMenu.onmouseout = function(){
             oSubMenu.style.height = 0;
             oSubMenu.style.display = "none";
