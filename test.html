@@ -2347,19 +2347,20 @@
         var aUlList = oSubMenu.getElementsByTagName("ul");
         for(var i = 0;i <aLiList.length;i++){
             aLiList[i].index = i;
-          /*  oHeaderMenu.onmouseover = function(){
+            oHeaderMenu.onmouseover = function(){
+                console.log(111);
                 animate(oSubMenu,{height:220});
-
-            }*/
-            aLiList[i].onmouseover= function () {
-                animate(oSubMenu,{height:220});
-                aUlList[this.index].style.display = "block";
-                oSubMenu.style.display = "block";
+                aLiList[i].onmouseover= function () {
+                    // animate(oSubMenu,{height:220});
+                    console.log(222);
+                    aUlList[this.index].style.display = "block";
+                    oSubMenu.style.display = "block";
                 }
-            aLiList[i].onmouseout = function(){
-                aUlList[this.index].style.display = "none";
-             }
+                aLiList[i].onmouseout = function(){
+                    aUlList[this.index].style.display = "none";
+                }
             }
+        }
         oHeaderMenu.onmouseout = function(){
             oSubMenu.style.height = 0;
             oSubMenu.style.display = "none";
@@ -2405,7 +2406,6 @@
         var oSlideListUl = document.getElementsByClassName("slide-list-ul")[0];
         var aSlideLi = oSlideListUl.getElementsByTagName("li");
         var aSubList3 = document.getElementsByClassName("sub-list-3");
-        console.log(aSubList3);
         for(var i = 0;i <aSlideLi.length;i++){
             aSlideLi[i].index = i;
             aSlideLi[i].onmouseover = function(){
