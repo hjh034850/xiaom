@@ -2348,26 +2348,19 @@
         var aUlList = oSubMenu.getElementsByTagName("ul");
         for(var i = 0;i <aLiList.length;i++){
             aLiList[i].index = i;
-            oHeaderMenu.onmouseover = function(){
-                console.log(111);
-                animate(oSubMenu,{height:220});
                 aLiList[i].onmouseover= function () {
-                    // animate(oSubMenu,{height:220});
-                    console.log(222);
+                    animate(oSubMenu,{height:220});
                     aUlList[this.index].style.display = "block";
                     oSubMenu.style.display = "block";
                 }
                 aLiList[i].onmouseout = function(){
                     aUlList[this.index].style.display = "none";
                 }
-            }
         }
         oHeaderMenu.onmouseout = function(){
             oSubMenu.style.height = 0;
             oSubMenu.style.display = "none";
         }
-
-
     </script><!--header-->
     <script>
         var search = document.getElementsByClassName("search")[0];
@@ -2421,10 +2414,6 @@
                 }
             }
         }
-
-
-
-
     </script><!--轮播图左侧-->
     <script>
        var oBtn = document.getElementById("btn");
