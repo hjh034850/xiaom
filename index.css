@@ -8,14 +8,7 @@ a{
 li{
     list-style: none;
 }
-/*#content-box-id li:hover{
-    animation: runtop 0.3s ease-in forwards;
-}
-@keyframes runtop {
-    100%{
-        margin-top: -1px;
-    }
-}*/
+
 .slide-box{
 
     position: relative;
